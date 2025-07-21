@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><link rel="icon" href="data:">
+<title>pdf2csv-helper</title></head><body>
+<h1>pdf2csv-helper</h1>
+<textarea id=ta></textarea><br>
+<button id=btn>copy csv table from text</button>
+<hr>
+<div><a href=https://github.com/code4fukui/pdf2csv-helper/>src on GitHub</a></div>
+
+<script type="module">
+const copyTableToClipboard = async (tsv) => {
+  // テキストをクリップボードにコピー
+  try {
+    await navigator.clipboard.writeText(tsv);
+    alert("表をクリップボードにコピーしました。Excelに貼り付けてください。");
+  } catch (e) {
+    console.error("コピーに失敗:", e);
+  }
+};
+
+btn.onclick = () => {
+  const s = ta.value;
+  const s2 = s.replace(/\,/g, "");
+  const s3 = s2.replace(/ /g, "\t");
+  const s4 = s3.replace(/\\n/g, "\r\n");
+  copyTableToClipboard(s4);  
+};
+</script>
+
+<style>
+#ta {
+  width: 95%;
+  height: 25em;
+  padding: 0.5em 0;
+}
+</style>
+
+</body></html>
+
