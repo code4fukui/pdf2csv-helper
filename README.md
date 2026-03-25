@@ -1,17 +1,21 @@
 # pdf2csv-helper
-日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
 
-A simple web app that allows users to copy a CSV table from text.
+A Web/Code project by [Code for FUKUI](https://github.com/code4fukui).
 
-## Features
-- Extracts CSV table from text
-- Copies table to clipboard
-- Can be used to extract tables from PDF text
+**Live demo**: https://code4fukui.github.io/pdf2csv-helper/
 
-## Usage
-1. Enter or paste the text containing the CSV table into the text area.
-2. Click the "copy csv table from text" button.
-3. The CSV table will be copied to your clipboard, ready to be pasted into a spreadsheet or other application.
+## Technology Stack
+
+
+## Installation & Setup
+
+No build step required. Clone the repository and open `index.html` in a browser,
+or visit the live demo at https://code4fukui.github.io/pdf2csv-helper/
+
+## Contributing
+
+Contributions are welcome. Please open an issue or pull request on GitHub.
 
 ## License
-This project is licensed under the [MIT License](LICENSE).
+
+MIT License. See [LICENSE](./LICENSE) for details.
